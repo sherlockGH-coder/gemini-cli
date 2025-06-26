@@ -231,6 +231,9 @@ const App = ({ config, settings, startupWarnings = [] }: AppProps) => {
     return () => clearInterval(interval);
   }, [config, currentModel]);
 
+  // Commented out to prevent automatic model switching and "slow response" messages.
+  // To re-enable, uncomment this block.
+  /*
   // Set up Flash fallback handler
   useEffect(() => {
     const flashFallbackHandler = async (
@@ -250,8 +253,9 @@ const App = ({ config, settings, startupWarnings = [] }: AppProps) => {
       return true; // Always accept the fallback
     };
 
-    config.setFlashFallbackHandler(flashFallbackHandler);
+    config.setFlashFallbackHandler(undefined);
   }, [config, addItem]);
+  */
 
   const {
     handleSlashCommand,
