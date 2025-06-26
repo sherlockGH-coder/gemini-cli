@@ -36,3 +36,5 @@ packages/*/coverage/
 # Generated files
 packages/cli/src/generated/
 .integration-tests/
+
+packages/cli/google-gemini-cli-0.1.1.tgz
